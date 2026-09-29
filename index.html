@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Jenica &amp; Mark — Febuary 18, 2027</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ivory:#F9F7F2;
+  --xanadu:#738678;
+  --ink:#1A1814;
+  --paper:#FFFFFF;
+  --sage:#5C6B4E;
+  --gold:#B89A6A;
+  --blush:#D9B8AE;
+  --lavender:#B6ACC4;
+  --sand:#C9B79A;
+  --teal:#5F8A86;
+  --xanadu-soft:rgba(115,134,120,.35);
+  --line-w:1.5px;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px)}
+body{
+  background:var(--ivory);
+  color:var(--ink);
+  font-family:'Montserrat',sans-serif;
+  font-weight:300;
+  letter-spacing:.02em;
+  line-height:1.7;
+  min-height:100%;
+  overflow-x:hidden;
+}
+h1,h2,h3,.display{
+  font-family:'Cormorant Garamond',serif;
+  font-weight:400;
+  letter-spacing:.01em;
+}
+.wrap{max-width:720px;margin:0 auto;padding:0 28px}
+section{padding:110px 0;text-align:center;position:relative}
+.rule{width:64px;height:var(--line-w);background:var(--xanadu);margin:28px auto;border:none}
+.eyebrow{font-size:.72rem;letter-spacing:.16em;color:var(--xanadu);margin-bottom:14px;font-family:'Montserrat',sans-serif}
+.section-head{font-size:clamp(1.7rem,4.4vw,2.15rem);font-weight:400;margin-bottom:22px}
+p{max-width:56ch;margin:0 auto}
+
+/* NAV */
+#site-nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(249,247,242,.9);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--xanadu-soft);padding-top:env(safe-area-inset-top,0px)}
+.nav-inner{max-width:920px;margin:0 auto;display:flex;align-items:center;gap:18px;padding:14px 22px}
+.nav-mono{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.15rem;color:var(--ink);text-decoration:none;flex:0 0 auto}
+.nav-links{display:flex;gap:20px;overflow-x:auto;flex:1;scrollbar-width:none}
+.nav-links::-webkit-scrollbar{display:none}
+.nav-links a{font-size:.66rem;letter-spacing:.09em;text-transform:uppercase;color:var(--xanadu);text-decoration:none;white-space:nowrap;padding-bottom:3px;border-bottom:1px solid transparent}
+.nav-links a:hover,.nav-links a:focus-visible{color:var(--ink);border-color:var(--xanadu)}
+.nav-rsvp{flex:0 0 auto;background:var(--ink);color:var(--ivory);padding:9px 20px;font-size:.66rem;letter-spacing:.09em;text-transform:uppercase;text-decoration:none;transition:background .2s}
+.nav-rsvp:hover{background:var(--sage)}
+.nav-burger{display:none;background:none;border:none;font-size:1.4rem;line-height:1;color:var(--ink);cursor:pointer;padding:2px 4px;flex:0 0 auto}
+.nav-spacer{height:calc(64px + env(safe-area-inset-top,0px))}
+@media(max-width:640px){
+  .nav-mono{display:none}
+  .nav-burger{display:block}
+  .nav-links{display:none;position:fixed;top:calc(58px + env(safe-area-inset-top,0px));left:0;right:0;flex-direction:column;align-items:center;background:var(--ivory);border-bottom:1px solid var(--xanadu-soft);padding:16px 22px 22px;gap:16px;z-index:199;overflow:visible;box-shadow:0 12px 24px rgba(0,0,0,.06)}
+  .nav-links.open{display:flex}
+  .nav-links a{font-size:.75rem;padding:4px 0}
+}
+.placeholder{
+  border:1.5px dashed var(--xanadu-soft);
+  border-radius:2px;
+  color:var(--xanadu);
+  font-size:.7rem;
+  letter-spacing:.03em;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:4px;
+  background:repeating-linear-gradient(135deg,transparent,transparent 10px,rgba(115,134,120,.05) 10px,rgba(115,134,120,.05) 20px);
+  line-height:1.5;
+  padding:10px;
+}
+.placeholder b{font-weight:500;color:var(--sage)}
+.placeholder.has-asset{border:none;background:none;padding:0}
+.placeholder img{width:100%;height:100%;object-fit:contain;display:block}
+
+/* HERO */
+#hero{padding:64px 0 90px;min-height:92vh;display:flex;align-items:center}
+/* Three-column grid: the centre column is ALWAYS column 2. Commenting out the left
+   and/or right botanical column (or only the placeholder inside it) leaves the centre
+   content exactly where it is: nothing shifts, squeezes or de-centres. */
+.hero-inner{display:grid;grid-template-columns:1fr minmax(0,460px) 1fr;column-gap:22px;align-items:center;width:100%}
+.hero-side{align-self:center}
+.hero-side.left{grid-column:1;justify-self:end}
+.hero-side.right{grid-column:3;justify-self:start}
+.hero-side .placeholder{width:88px;height:280px}
+/* --doodle-max = widest the couple portrait may get (centre column holds up to 460px) */
+.hero-center{grid-column:2;min-width:0;position:relative;--doodle-max:280px}
+.hero-center .cat-corner{width:34px;height:34px;position:absolute;bottom:-38px;font-size:.55rem}
+.hero-center .cat-corner.l{left:-10px}
+.hero-center .cat-corner.r{right:-10px}
+.names{font-size:clamp(2.6rem,7vw,3.6rem);font-weight:300}
+.names .amp{font-style:italic;color:var(--gold);padding:0 6px}
+.couple-doodle{width:min(100%,var(--doodle-max,280px));aspect-ratio:5/6;border-radius:4px;margin:26px auto 0;overflow:hidden}
+.date-line{font-family:'Montserrat',sans-serif;font-size:.85rem;letter-spacing:.1em;color:var(--sage);margin-top:10px}
+.venue-line{font-size:1rem;font-style:italic;font-family:'Cormorant Garamond',serif;margin-top:6px;color:var(--ink)}
+.countdown{display:flex;gap:26px;justify-content:center;margin-top:38px}
+.countdown div{display:flex;flex-direction:column;align-items:center}
+.countdown .n{font-family:'Cormorant Garamond',serif;font-size:1.9rem;color:var(--ink)}
+.countdown .l{font-size:.62rem;letter-spacing:.1em;color:var(--xanadu);margin-top:2px}
+.scroll-cue{margin-top:54px;font-size:.65rem;letter-spacing:.14em;color:var(--xanadu);opacity:.8}
+.scroll-cue::after{content:"";display:block;width:var(--line-w);height:30px;background:var(--xanadu);margin:8px auto 0;opacity:.5}
+
+/* STORY */
+.story-block{margin-bottom:64px}
+.story-block:last-child{margin-bottom:0}
+.story-text{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-style:italic;line-height:1.65;color:#3a3630}
+.story-illus{width:100%;aspect-ratio:340/140;margin:34px auto 0;max-width:340px}
+@media(min-width:641px){
+  .story-illus{max-width:480px}
+}
+
+/* DETAILS CARDS */
+.cards{display:flex;gap:0;justify-content:center;align-items:stretch;flex-wrap:wrap;position:relative}
+/* Filled gold marker (same look as the schedule markers) at the centre of the vertical divider */
+.cards::after{content:"";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:15px;height:15px;border-radius:50%;background:var(--gold);display:none;z-index:2}
+@media(min-width:660px){.cards::after{display:block}}
+.card{padding:36px 42px;flex:1 1 260px;max-width:300px;position:relative}
+.card::before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:34px;height:1.5px;background:var(--gold)}
+.card::after{content:"";position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:34px;height:1.5px;background:var(--gold)}
+.card h3{font-size:1.4rem;margin:20px 0 14px}
+.card p{font-size:.82rem;color:#4b463e}
+.card .meta{margin-top:12px;font-size:.78rem;letter-spacing:.03em;color:var(--sage)}
+@media(min-width:660px){.cards .card:first-child{border-right:1px solid var(--xanadu-soft)}}
+.divider-sprig{width:70px;height:44px;margin:0 auto -22px;position:relative;z-index:2;background:var(--ivory)}
+.same-venue-note{margin-top:34px;font-size:.78rem;font-style:italic;font-family:'Cormorant Garamond',serif;color:var(--sage);max-width:44ch}
+
+/* WEAR */
+.wear-cols{display:flex;gap:40px;justify-content:center;margin-top:34px;flex-wrap:wrap}
+.wear-col{flex:1 1 220px;max-width:250px}
+.wear-illus{height:280px}
+.wear-col h4{font-family:'Montserrat',sans-serif;font-weight:400;font-size:.8rem;letter-spacing:.08em;margin-top:16px;color:var(--sage)}
+.wear-note{font-size:.78rem;color:#4b463e;margin-top:10px;max-width:30ch;margin-left:auto;margin-right:auto}
+.swatches{display:flex;gap:8px;justify-content:center;margin-top:12px}
+.swatch{width:16px;height:16px;border-radius:50%;border:1px solid rgba(0,0,0,.08)}
+
+/* SCHEDULE */
+.schedule-timeline{position:relative;max-width:640px;margin:50px auto 0;padding:10px 0}
+.schedule-timeline::before{content:"";position:absolute;left:50%;top:0;bottom:0;width:var(--line-w);background:var(--xanadu-soft);transform:translateX(-50%)}
+.sched-item{position:relative;width:50%;box-sizing:border-box;padding:0 42px 60px}
+.sched-item:last-child{padding-bottom:0}
+.sched-item.left{margin-right:auto;text-align:right}
+.sched-item.right{margin-left:auto;text-align:left}
+.sched-marker{position:absolute;top:2px;width:15px;height:15px;border:none;border-radius:50%;background:var(--gold)}
+.sched-item.left .sched-marker{right:-7px}
+.sched-item.right .sched-marker{left:-7px}
+.sched-time{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1rem;color:var(--sage)}
+.sched-card h4{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:1.3rem;margin-top:2px}
+.sched-card p{font-size:.8rem;color:#4b463e;margin-top:8px;max-width:34ch}
+.sched-item.left .sched-card p{margin-left:auto}
+.sched-item.right .sched-card p{margin-right:auto}
+.sched-cat-peek{position:absolute;bottom:-6px;left:-8px;width:30px;height:30px;font-size:.5rem}
+@media(max-width:640px){
+  .schedule-timeline::before{left:20px;transform:none}
+  .sched-item,.sched-item.left,.sched-item.right{width:100%;text-align:left;padding:0 0 44px 52px;margin:0}
+  .sched-item.left .sched-marker,.sched-item.right .sched-marker{left:12.5px;right:auto}
+  .sched-item.left .sched-card p,.sched-item.right .sched-card p{margin-left:0;margin-right:0}
+  .sched-cat-peek{left:auto;right:-6px}
+}
+
+/* LOCATION */
+/* LOCATION */
+.loc-stamp-frame{position:relative;width:100%;max-width:480px;margin:0 auto 40px}
+.loc-stamp{width:100%;aspect-ratio:4/3;border:1.5px solid var(--xanadu);overflow:hidden;position:relative;margin:0}
+.loc-stamp::after{content:"";position:absolute;inset:6px;border:.75px solid var(--gold);pointer-events:none}
+.loc-stamp.has-asset img{object-fit:cover}
+@media(min-width:641px){
+  .loc-stamp-frame{max-width:640px}
+}
+.loc-frame{border:var(--line-w) solid var(--xanadu);padding:30px;margin-top:28px;max-width:420px;margin-left:auto;margin-right:auto}
+.maplink{display:inline-block;margin-top:16px;font-size:.78rem;letter-spacing:.05em;color:var(--sage);border-bottom:1px solid var(--sage);padding-bottom:2px;text-decoration:none}
+
+/* FAQ */
+.faq{max-width:560px;margin:36px auto 0;text-align:left}
+.faq-item{border-bottom:var(--line-w) solid var(--xanadu-soft)}
+.faq-item:first-child{border-top:var(--line-w) solid var(--xanadu-soft)}
+.faq-q{width:100%;background:none;border:none;text-align:left;padding:20px 4px;font-family:'Cormorant Garamond',serif;font-size:1.15rem;color:var(--ink);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.faq-q .plus{font-family:'Montserrat',sans-serif;font-weight:300;color:var(--gold);transition:transform .25s ease}
+.faq-item.open .plus{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease}
+.faq-item.open .faq-a{max-height:220px}
+.faq-a p{padding:0 4px 20px;font-size:.85rem;color:#4b463e;max-width:100%;text-align:left}
+
+/* CATS */
+.cat-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:26px;margin-top:40px}
+.cat-grid > div{flex:0 1 calc(25% - 19.5px)}
+.cat-portrait-wrap{aspect-ratio:1;border-radius:50%;/* border:1.5px solid var(--xanadu-soft); */overflow:hidden;background:var(--ivory)}
+.cat-portrait{width:100%;height:100%;object-fit:cover;display:block}
+.cat-name{font-family:'Cormorant Garamond',serif;font-size:1.05rem;margin-top:12px}
+.cat-line{font-size:.68rem;color:#6b665c;margin-top:2px}
+@media(max-width:560px){.cat-grid > div{flex:0 1 calc(50% - 13px)}}
+
+/* RSVP */
+.rsvp-frame{border:var(--line-w) solid var(--xanadu);padding:52px 34px;margin-top:36px;position:relative}
+.rsvp-frame .cat-corner{position:absolute;bottom:-16px;right:20px;width:30px;height:30px;font-size:.5rem;background:var(--ivory)}
+.rsvp-form label{display:block;font-size:.7rem;letter-spacing:.08em;color:var(--xanadu);margin:18px 0 8px}
+.guest-name{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-style:italic;margin-bottom:6px}
+.radio-row{display:flex;flex-direction:column;align-items:center;gap:14px;margin-top:12px}
+.radio-opt{border:var(--line-w) solid var(--xanadu);padding:14px 30px;font-size:.82rem;letter-spacing:.05em;cursor:pointer;background:none;color:var(--ink);transition:.2s;width:100%;max-width:280px}
+.radio-opt.selected{background:var(--sage);border-color:var(--sage);color:var(--ivory)}
+.radio-opt[data-val="no"].selected{background:#A9634F;border-color:#A9634F;color:var(--ivory)}
+.rsvp-submit{margin-top:30px;background:var(--ink);color:var(--ivory);border:none;padding:14px 44px;font-size:.78rem;letter-spacing:.1em;cursor:pointer;font-family:'Montserrat',sans-serif}
+.rsvp-submit:disabled{opacity:.4;cursor:not-allowed}
+.rsvp-success{display:none}
+.rsvp-success.show{display:block}
+.rsvp-form.hide{display:none}
+.dietary{width:100%;max-width:380px;margin:0 auto;display:block;background:transparent;border:none;border-bottom:1px solid var(--xanadu-soft);font-family:'Montserrat',sans-serif;font-weight:300;font-size:.85rem;padding:8px 4px;text-align:center;color:var(--ink)}
+.dietary:focus{outline:none;border-color:var(--xanadu)}
+
+/* FOOTER */
+footer{padding:70px 0 calc(50px + env(safe-area-inset-bottom,0px));text-align:center}
+.footer-illus{width:70px;height:50px;margin:0 auto 20px}
+.footer-names{font-family:'Cormorant Garamond',serif;font-size:1.3rem}
+.footer-date{font-size:.72rem;letter-spacing:.1em;color:var(--xanadu);margin-top:4px}
+.footer-line{font-style:italic;font-family:'Cormorant Garamond',serif;margin-top:16px;color:#4b463e}
+
+/* INVALID TOKEN */
+#invalid-screen{position:fixed;inset:0;background:var(--ivory);z-index:999;display:none;align-items:center;justify-content:center;text-align:center;padding:30px}
+#invalid-screen.show{display:flex}
+#invalid-screen .placeholder{width:120px;height:120px;margin:0 auto 26px;border-radius:50%}
+
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.faq-a,.faq-q .plus{transition:none}}
+@media(max-width:600px){section{padding:80px 0}.hero-inner{column-gap:12px}.hero-side .placeholder{width:46px;height:200px}.hero-center .cat-corner{display:none}}
+</style>
+</head>
+<body>
+
+<nav id="site-nav">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-mono" id="nav-mono">M&amp;J</a>
+    <div class="nav-links" id="nav-links">
+      <a href="#story">Our Story</a>
+      <a href="#details">Details</a>
+      <a href="#wear">Attire</a>
+      <a href="#schedule">Schedule</a>
+      <a href="#location">Location</a>
+      <a href="#faq">FAQ</a>
+      <a href="#cats">Our Cats</a>
+    </div>
+    <button class="nav-burger" id="nav-burger" aria-label="Open menu" aria-expanded="false">☰</button>
+    <a href="#rsvp" class="nav-rsvp">RSVP</a>
+  </div>
+</nav>
+<div class="nav-spacer"></div>
+
+<div id="invalid-screen">
+  <div>
+    <div class="placeholder" data-asset="error-illustration.svg">120×120<br><b>error-illustration.svg</b><br>wilted botanical sprig, line art</div>
+    <h2 style="font-size:1.6rem">This link isn't one we recognize</h2>
+    <p style="margin-top:10px;font-size:.85rem">Please check the QR code or link from your invitation, or reach out to <span data-cfg="bride">Jenica</span> &amp; <span data-cfg="groom">Mark</span> directly.</p>
+  </div>
+</div>
+
+<main id="site">
+
+<section id="hero">
+  <div class="wrap hero-inner">
+    <!-- Optional botanical column: safe to comment out (layout stays centered) -->
+    <div class="hero-side left"><div class="placeholder" data-asset="hero-botanical-left.svg">88×280<br><b>hero-botanical-left.svg</b><br>architectural branch &amp; leaf cluster</div></div>
+    <div class="hero-center">
+      <div class="date-line">SAVE THE DATE</div>
+      <h1 class="names"><span data-cfg="groom">Mark</span><span class="amp">&amp;</span><span data-cfg="bride">Jenica</span></h1>
+      <div class="placeholder couple-doodle" data-asset="couple-doodle.png">500×600 · <b>couple-doodle.svg</b><br>illustrated line-art doodle portrait of the couple, thin single-stroke, no fill</div>
+      <hr class="rule">
+      <div class="venue-line"><span data-cfg="venueName">Villa de los Jardines</span>, <span data-cfg="venueCity">Tagaytay</span></div>
+      <div class="date-line" style="margin-top:2px" data-cfg="dateDisplayCaps">Febuary 18, 2027</div>
+      <div class="countdown" id="countdown">
+        <div><span class="n" id="cd-days">--</span><span class="l">DAYS</span></div>
+        <div><span class="n" id="cd-hours">--</span><span class="l">HOURS</span></div>
+        <div><span class="n" id="cd-mins">--</span><span class="l">MINS</span></div>
+      </div>
+      <div class="scroll-cue">SCROLL</div>
+      <div class="placeholder cat-corner l" data-asset="cat-peek-1.svg">cat-peek-1.svg</div>
+      <div class="placeholder cat-corner r" data-asset="cat-peek-2.svg">cat-peek-2.svg</div>
+    </div>
+    <!-- Optional botanical column: safe to comment out (layout stays centered) -->
+    <div class="hero-side right"><div class="placeholder" data-asset="hero-botanical-right.svg">88×280<br><b>hero-botanical-right.svg</b><br>architectural branch &amp; leaf cluster</div></div>
+  </div>
+</section>
+
+<section id="story">
+  <div class="wrap">
+    <div class="eyebrow">OUR STORY</div>
+    <h2 class="section-head">How It Began</h2>
+    <div class="story-block">
+      <p class="story-text">They met the way most good things happen — quietly, without much fanfare, and at exactly the right time.</p>
+      <div class="placeholder story-illus" data-asset="shelfie.svg">340×140 · <b>shelfie.svg</b><br>stacked books, turntable, vinyl sleeves labeled "T.S.", "TOP", "Beatles"</div>
+    </div>
+    <div class="story-block">
+      <p class="story-text">He buys books the way some people collect stamps — with great intention and very little follow-through. The shelves are full. The spines are pristine. Somewhere between the unread pages and the background music, he found her. She brought Taylor Swift into the house and never left. He countered with Twenty One Pilots and The Beatles, and somehow it all made sense on the same turntable.</p>
+      <div class="placeholder story-illus" data-asset="vinyl.png">340×140 · <b>stamps-trio.svg</b><br>Korea (Namsan Tower), Singapore (Marina Bay Sands), Hội An lantern — circular typographic stamps</div>
+    </div>
+    <div class="story-block">
+      <p class="story-text">Then, they started collecting places, too.</p>
+    </div>
+    <div class="story-block">
+      <p class="story-text">New cities, long flights, questionable navigation, and the quiet realization that anywhere is better when you have your favorite person beside you.</p>
+      <div class="placeholder story-illus" data-asset="travels.png">340×140 · <b>seven-cats-couch.svg</b><br>editorial portrait, minimal line art</div>
+    </div>
+    <div class="story-block">
+      <p class="story-text">Back home, seven cats joined the story – although, if you asked the cats, they would probably say the story has always been about them.</p>
+    </div>
+    <div class="story-block">
+      <p class="story-text">And now, on the eighteenth of February, they’re doing something surprisingly official for two people who have spent years simply choosing each other, one ordinary day at a time.</p>
+      <p class="story-text">~</p>
+      <p class="story-text">No dramatic plot twist. No grand finale.</p>
+      <p class="story-text">Just the next chapter – and the easiest YES.</p>
+    </div>
+  </div>
+</section>
+
+<section id="details">
+  <div class="wrap">
+    <div class="eyebrow">THE DETAILS</div>
+    <h2 class="section-head">Ceremony &amp; Reception</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Ceremony</h3>
+        <p><span data-cfg="venueName">Villa de los Jardines</span> — Garden Chapel</p>
+        <div class="meta" data-cfg="dateDisplay">Febuary 18, 2027</div>
+        <div class="meta" data-cfg="ceremonyTime">3:00 PM</div>
+      </div>
+      <div class="card">
+        <h3>Reception</h3>
+        <p><span data-cfg="venueName">Villa de los Jardines</span> — Grand Ballroom</p>
+        <div class="meta">Garden Formal</div>
+      </div>
+    </div>
+    <p class="same-venue-note">Ceremony and reception both take place at <span data-cfg="venueName">Villa de los Jardines</span> — just a short walk apart, no need to travel between venues.</p>
+    <div class="divider-sprig"><div class="placeholder" data-asset="sprig-divider.svg" style="height:100%">70×44 · sprig-divider.svg</div></div>
+  </div>
+</section>
+
+<section id="wear">
+  <div class="wrap">
+    <div class="eyebrow">ATTIRE</div>
+    <h2 class="section-head">Dress to Celebrate</h2>
+    <p>Garden Formal — we'd love to see you dressed for the occasion.</p>
+    <div class="wear-cols">
+      <div class="wear-col">
+        <div class="placeholder wear-illus" data-asset="dress-silhouette.svg">220×280 · <b>dress-silhouette.svg</b><br>elegant dress silhouette, thin single-stroke, no fill</div>
+        <h4>WOMENS</h4>
+        <p class="wear-note">Soft, flowing silhouettes in blush, dusty lavender, sage, or cream — garden party elegance rather than formal black tie. Floor-length or midi, breathable fabrics for an outdoor garden setting.</p>
+        <div class="swatches">
+          <div class="swatch" style="background:var(--blush)"></div>
+          <div class="swatch" style="background:var(--lavender)"></div>
+          <div class="swatch" style="background:var(--sage)"></div>
+          <div class="swatch" style="background:#F3EFE6;border-color:rgba(0,0,0,.15)"></div>
+        </div>
+      </div>
+      <div class="wear-col">
+        <div class="placeholder wear-illus" data-asset="suit-silhouette.svg">220×280 · <b>suit-silhouette.svg</b><br>black suit silhouette, thin single-stroke, no fill</div>
+        <h4>MENS</h4>
+        <p class="wear-note">A well-tailored black suit with a crisp white shirt. Ties optional — comfort is encouraged, especially once the dancing starts.</p>
+        <div class="swatches">
+          <div class="swatch" style="background:var(--ink)"></div>
+          <div class="swatch" style="background:var(--paper);border-color:rgba(0,0,0,.2)"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="schedule">
+  <div class="wrap">
+    <div class="eyebrow">SCHEDULE</div>
+    <h2 class="section-head">A Day to Remember</h2>
+    <div class="schedule-timeline">
+      <div class="sched-item left">
+        <div class="sched-marker"></div>
+        <div class="sched-card">
+          <div class="sched-time">3:00 PM</div>
+          <h4>Guest Arrival</h4>
+          <p>Doors open at the garden entrance — settle in with a welcome drink as we seat everyone ahead of the ceremony.</p>
+        </div>
+      </div>
+      <div class="sched-item right">
+        <div class="sched-marker"></div>
+        <div class="sched-card">
+          <div class="sched-time">4:00 PM</div>
+          <h4>Wedding Ceremony</h4>
+          <p>Exchanging vows under the abundance of God’s grace — a moment our sevents cats have been so-patiently waiting for.</p>
+        </div>
+      </div>
+      <div class="sched-item left">
+        <div class="sched-marker"></div>
+        <div class="sched-card">
+          <div class="sched-time">4:30 PM</div>
+          <h4>Cocktail Hour</h4>
+          <p>Light bites and easy conversation on the garden terrace while the wedding party steps away for photos.</p>
+        </div>
+      </div>
+      <div class="sched-item right">
+        <div class="sched-marker"></div>
+        <div class="sched-card">
+          <div class="sched-time">6:00 PM</div>
+          <h4>Reception Dinner</h4>
+          <p>Dinner is served in the grand ballroom, followed by toasts from the people who know them best.</p>
+        </div>
+      </div>
+      <div class="sched-item left">
+        <div class="sched-marker"></div>
+        <div class="sched-card">
+          <div class="sched-time">8:30 PM</div>
+          <h4>Dancing &amp; Celebration</h4>
+          <p>The floor opens up — first dance, open bar, and dancing until the early hours.</p>
+        </div>
+        <div class="placeholder sched-cat-peek" data-asset="cat-peek-schedule.svg">cat-peek-schedule.svg</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="location">
+  <div class="wrap">
+    <div class="eyebrow">LOCATION</div>
+    <h2 class="section-head">Find Your Way</h2>
+    <h3 style="font-size:1.5rem;font-style:italic" data-cfg="venueName">Villa de los Jardines</h3>
+    <div class="loc-stamp-frame">
+      <div class="placeholder loc-stamp" data-asset="stamp-venue.jpg">Venue photo<br><b>stamp-venue.jpg</b></div>
+    </div>
+    <div class="loc-frame">
+      <p style="font-size:.88rem" data-cfg="venueAddress">Km 58 Aguinaldo Highway, Tagaytay City</p>
+      <a class="maplink" id="maps-link" href="#" target="_blank" rel="noopener">View on Google Maps →</a>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="eyebrow">FREQUENTLY ASKED</div>
+    <h2 class="section-head">Good to Know</h2>
+    <div class="faq" id="faq-list">
+      <div class="faq-item"><button class="faq-q">Are the ceremony and reception at the same place?<span class="plus">+</span></button><div class="faq-a"><p>Yes — both will be held at <span data-cfg="venueName">Villa de los Jardines</span>, just a short walk apart. No need to travel between venues.</p></div></div>
+      <div class="faq-item"><button class="faq-q">What time should I arrive?<span class="plus">+</span></button><div class="faq-a"><p>We suggest arriving by 3:00 PM to allow time for seating before the ceremony begins at 4:00 PM.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Can I bring a plus-one?<span class="plus">+</span></button><div class="faq-a"><p>We’d love to celebrate with everyone, but our guest list is limited to those named on the invitation. If a plus-one has been included for you, their name or guest option will appear on your invitation. Thank you for understanding and for helping us keep the celebration intimate.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Are kids welcome?<span class="plus">+</span></button><div class="faq-a"><p>As much as we adore your little ones, our celebration will be an adults-only affair, with the exception of children who are part of the wedding entourage or specifically named on the invitation. We hope you can enjoy the evening as a well-deserved night out!</span>.</p></div></div>
+      <div class="faq-item"><button class="faq-q">I have a dietary restriction — what do I do?<span class="plus">+</span></button><div class="faq-a"><p>Please let us know when you RSVP and include any allergies or dietary restrictions we should be aware of. We’ll do our best to coordinate with the venue so you can enjoy the meal with everyone else..</p></div></div>
+      <div class="faq-item"><button class="faq-q">Is there parking at the venue?<span class="plus">+</span></button><div class="faq-a"><p>Absolutely – and plenty of it. <span data-cfg="venueName">Villa de los Jardines</span> offers on-site secured parking for up to 90 vehicles, so never worry about where to park.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Is the venue accessible?<span class="plus">+</span></button><div class="faq-a"><p>Yes, the venue is fully accessible. Please let us know if you have any specific needs.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Where should I stay?<span class="plus">+</span></button><div class="faq-a"><p>We recommend hotels nearby. A list of suggested accommodations will be shared closer to the date.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="cats">
+  <div class="wrap">
+    <div class="eyebrow">OUR CATS</div>
+    <h2 class="section-head">The Ones Who Were Here First</h2>
+    <p>Seven souls who arrived before the rings, the vows, and the venue booking. They have opinions about all of it.</p>
+    <div class="cat-grid" id="cat-grid"></div>
+  </div>
+</section>
+
+<section id="rsvp">
+  <div class="wrap">
+    <div class="eyebrow">RSVP</div>
+    <h2 class="section-head">Join the Celebration</h2>
+    <p>We joyfully request the favour of your reply no later than <span data-cfg="rsvpBy">Febuary 1, 2025</span>.</p>
+    <div class="rsvp-frame">
+      <div class="placeholder cat-corner" data-asset="cat-peek-rsvp.svg">cat-peek-rsvp.svg</div>
+      <form class="rsvp-form" id="rsvp-form">
+        <div class="guest-name" id="guest-name">Dear Guest</div>
+        <label>Will you be attending? We joyfully request the favour of your reply no later than October 31, 2026</label>
+        <div class="radio-row">
+          <button type="button" class="radio-opt" data-val="yes">Yes, I’ll be there</button>
+          <button type="button" class="radio-opt" data-val="no">No, I can’t make it</button>
+        </div>
+        <label>Dietary requirements (optional)</label>
+        <input class="dietary" type="text" placeholder="e.g. vegetarian, no shellfish">
+        <br>
+        <button type="submit" class="rsvp-submit" id="rsvp-submit" disabled>Send Reply</button>
+      </form>
+      <div class="rsvp-success" id="rsvp-success">
+        <h3 id="success-headline" style="font-size:1.7rem"></h3>
+        <p id="success-body" style="margin-top:12px;font-size:.88rem"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="placeholder footer-illus" data-asset="footer-vinyl.svg">70×50 · footer-vinyl.svg</div>
+    <div class="footer-names"><span data-cfg="groom">Mark</span> &amp; <span data-cfg="bride">Jenica</span></div>
+    <div class="footer-date" data-cfg="dateDisplayCaps">Febuary 18, 2027</div>
+    <p class="footer-line">With love and gratitude</p>
+  </div>
+</footer>
+
+<div id="admin-panel" style="display:none;max-width:560px;margin:60px auto;padding:0 28px;text-align:left">
+  <div class="eyebrow" style="text-align:left">ADMIN — TOKEN GENERATOR</div>
+  <p style="text-align:left;font-size:.8rem;margin-bottom:14px">One guest first name per line. Generates a 4-char ID + full token per guest.</p>
+  <textarea id="admin-input" rows="6" style="width:100%;font-family:'Montserrat',sans-serif;font-size:.85rem;padding:10px;border:1.5px solid var(--xanadu)"></textarea>
+  <br><button id="admin-generate" class="rsvp-submit" style="margin-top:14px">Generate Tokens</button>
+  <pre id="admin-output" style="margin-top:20px;font-size:.72rem;background:#fff;border:1px solid var(--xanadu-soft);padding:14px;white-space:pre-wrap"></pre>
+  <button id="admin-csv" class="rsvp-submit" style="display:none;margin-top:10px;background:var(--sage)">Copy CSV</button>
+</div>
+
+<script>
+// ============================================================
+// EVENT CONFIG — edit everything here, it updates everywhere
+// ============================================================
+const CONFIG = {
+  bride: 'Jenica',
+  groom: 'Mark',
+  isoDateTime: '2027-02-18T15:00:00+08:00',   // used for the live countdown
+  dateDisplay: 'Febuary 18, 2027',
+  dateDisplayCaps: 'FEBUARY 18, 2027',
+  rsvpBy: 'October 31, 2026',
+  venueName: 'The Emerald Events Place',
+  venueCity: 'Antipolo City',
+  venueAddress: 'H598+R3G, Cabrera Rd, Antipolo, 1870 Rizal',
+  ceremonyTime: '4:00 PM'
+};
+
+document.title = `${CONFIG.bride} & ${CONFIG.groom} — ${CONFIG.dateDisplay}`;
+document.getElementById('nav-mono').textContent = `${CONFIG.groom[0]}&${CONFIG.bride[0]}`;
+document.querySelectorAll('[data-cfg]').forEach(el=>{
+  const key = el.dataset.cfg;
+  if(CONFIG[key] !== undefined) el.textContent = CONFIG[key];
+});
+document.getElementById('maps-link').href =
+  `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(CONFIG.venueName + ', ' + CONFIG.venueAddress)}`;
+
+// ---- Config ----
+const WEDDING_DATE = new Date(CONFIG.isoDateTime);
+const CATS = [
+  {name:'Julia', line:'The firstborn and self-appointed household supervisor.', file:'Portrait - Julia.png'},
+  {name:'Pollux', line:'Faithfully supervises Dad’s working hours and never misses a cuddle he wasn’t invited to.', file:'Portrait - Pollux.png'},
+  {name:'Lisa', line:'Bird, mouse, or fly – if it moves, she is already on the case. Call her name, and she will always have something to say.', file:'Portrait - Lisa.png'},
+  {name:'Jisoo', line:'Meals are served exclusively at a location of her choosing, preferably while she poses beautifully beside the plate.', file:'Portrait - Jisoo.png'},
+  {name:'Irish', line:'Small in size, big on nighttime cuddles and occasionally creative about where the bathroom is.', file:'Portrait - Irish.png'},
+  {name:'Favorite', line:'No leftover goes unclaimed, and the faintest sound of a treat bag can summon him from another dimension.', file:'Portrait - Favorite.png'},
+  {name:'Orange', line:'Give him a crumpled piece of paper and he will immediately transform the living room into his personal football stadium.', file:'Portrait - Orange.png'}
+];
+const STROKE_COLORS = ['var(--blush)','var(--lavender)','var(--sage)','var(--teal)','var(--gold)','var(--sand)','var(--xanadu)'];
+
+// Mock guest list — stands in for the Guests sheet until Apps Script is wired up
+const MOCK_GUESTS = {'X4K9-Maria':{name:'Maria', status:'pending'}, 'A7P2-Diego':{name:'Diego', status:'pending'}};
+
+// ---- Countdown ----
+function tickCountdown(){
+  const diff = WEDDING_DATE - new Date();
+  if(diff <= 0){document.getElementById('countdown').innerHTML = '<div class="date-line" style="font-size:.9rem">They\'re married!</div>';return;}
+  const d = Math.floor(diff/86400000), h = Math.floor(diff%86400000/3600000), m = Math.floor(diff%3600000/60000);
+  document.getElementById('cd-days').textContent = d;
+  document.getElementById('cd-hours').textContent = h;
+  document.getElementById('cd-mins').textContent = m;
+}
+tickCountdown(); setInterval(tickCountdown, 30000);
+
+// ---- Auto-promote any placeholder to a real image once its file exists ----
+// Drop a file into assets/illustrations/ with the exact name shown on the
+// placeholder label (svg or png, doesn't matter) and it takes over automatically.
+document.querySelectorAll('[data-asset]').forEach(ph=>{
+  const probe = new Image();
+  probe.onload = ()=>{
+    ph.classList.add('has-asset');
+    ph.innerHTML = '';
+    ph.appendChild(probe);
+  };
+  probe.onerror = ()=>{}; // leave the labeled placeholder exactly as-is
+  probe.alt = '';
+  probe.src = `assets/illustrations/${ph.dataset.asset}`;
+});
+
+// ---- Cats grid ----
+const catGrid = document.getElementById('cat-grid');
+CATS.forEach((cat,i)=>{
+  const el = document.createElement('div');
+  const fallback = `this.outerHTML='<div class=&quot;placeholder cat-portrait-wrap&quot; style=&quot;border-color:${STROKE_COLORS[i]}&quot;>${cat.file}</div>'`;
+  el.innerHTML = `<div class="cat-portrait-wrap" style="border-color:${STROKE_COLORS[i]}">
+      <img class="cat-portrait" src="assets/illustrations/${cat.file}" alt="${cat.name}" onerror="${fallback}">
+    </div>
+    <div class="cat-name">${cat.name}</div><div class="cat-line">${cat.line}</div>`;
+  catGrid.appendChild(el);
+});
+
+// ---- FAQ accordion ----
+document.querySelectorAll('.faq-item').forEach(item=>{
+  item.querySelector('.faq-q').addEventListener('click', ()=> item.classList.toggle('open'));
+});
+
+// ---- Mobile nav (hamburger) ----
+const navBurger = document.getElementById('nav-burger');
+const navLinks = document.getElementById('nav-links');
+navBurger.addEventListener('click', ()=>{
+  const open = navLinks.classList.toggle('open');
+  navBurger.setAttribute('aria-expanded', open);
+  navBurger.textContent = open ? '✕' : '☰';
+});
+navLinks.querySelectorAll('a').forEach(a=>{
+  a.addEventListener('click', ()=>{
+    navLinks.classList.remove('open');
+    navBurger.setAttribute('aria-expanded', 'false');
+    navBurger.textContent = '☰';
+  });
+});
+
+// ---- Token verification (client-side mock of Apps Script doGet?action=verify) ----
+const params = new URLSearchParams(location.search);
+const token = params.get('invite');
+let currentGuest = null;
+if(token){
+  const g = MOCK_GUESTS[token];
+  if(!g){
+    document.getElementById('invalid-screen').classList.add('show');
+  } else if(g.status === 'responded'){
+    document.getElementById('guest-name').textContent = `Dear ${g.name}`;
+    document.getElementById('rsvp-form').classList.add('hide');
+    document.getElementById('rsvp-success').classList.add('show');
+    document.getElementById('success-headline').textContent = 'You\'ve already replied';
+    document.getElementById('success-body').textContent = 'Thank you again — we can\'t wait to celebrate.';
+  } else {
+    currentGuest = {token, ...g};
+    document.getElementById('guest-name').textContent = `Dear ${g.name}`;
+  }
+}
+// no token: page renders in generic preview mode, RSVP form still usable for demo purposes
+
+// ---- RSVP form ----
+let attending = null;
+document.querySelectorAll('.radio-opt').forEach(btn=>{
+  btn.addEventListener('click', ()=>{
+    document.querySelectorAll('.radio-opt').forEach(b=>b.classList.remove('selected'));
+    btn.classList.add('selected');
+    attending = btn.dataset.val;
+    document.getElementById('rsvp-submit').disabled = false;
+  });
+});
+document.getElementById('rsvp-form').addEventListener('submit', e=>{
+  e.preventDefault();
+  if(!attending) return;
+  // Real build: POST to Apps Script doPost?action=rsvp with token + shared secret
+  const name = currentGuest ? currentGuest.name : 'Guest';
+  if(currentGuest) MOCK_GUESTS[currentGuest.token].status = 'responded';
+  document.getElementById('rsvp-form').classList.add('hide');
+  document.getElementById('rsvp-success').classList.add('show');
+  document.getElementById('success-headline').textContent = attending==='yes' ? 'See you there!' : 'You\'ll be missed';
+  document.getElementById('success-body').textContent = attending==='yes'
+    ? `Thank you, ${name} — we're so glad you're joining us on ${CONFIG.dateDisplay}.`
+    : `Thank you for letting us know, ${name}. We'll be thinking of you.`;
+});
+
+// ---- Admin tool (?admin=1) ----
+if(params.get('admin') === '1'){
+  document.getElementById('admin-panel').style.display = 'block';
+  const genBtn = document.getElementById('admin-generate');
+  const out = document.getElementById('admin-output');
+  const csvBtn = document.getElementById('admin-csv');
+  let csvText = '';
+  genBtn.addEventListener('click', ()=>{
+    const names = document.getElementById('admin-input').value.split('\n').map(s=>s.trim()).filter(Boolean);
+    const rows = [['Name','ID','Token','Full URL']];
+    const used = new Set();
+    names.forEach(name=>{
+      let id;
+      do{ id = Math.random().toString(36).slice(2,6).toUpperCase(); } while(used.has(id));
+      used.add(id);
+      const tok = `${id}-${name}`;
+      rows.push([name, id, tok, `${location.origin}${location.pathname}?invite=${tok}`]);
+    });
+    csvText = rows.map(r=>r.join(',')).join('\n');
+    out.textContent = csvText;
+    csvBtn.style.display = names.length ? 'inline-block' : 'none';
+  });
+  csvBtn.addEventListener('click', ()=>{
+    navigator.clipboard.writeText(csvText).catch(()=>{});
+    csvBtn.textContent = 'Copied ✓';
+    setTimeout(()=>csvBtn.textContent='Copy CSV', 1500);
+  });
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <rect x="1" y="1" width="398" height="298" fill="#F9F7F2" stroke="#738678" stroke-width="1.5" stroke-dasharray="6 5"/>
+  <text x="200" y="140" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="16" fill="#738678">Placeholder</text>
+  <text x="200" y="164" text-anchor="middle" font-family="Georgia, serif" font-size="13" fill="#5C6B4E">cat-04.svg</text>
+  <text x="200" y="184" text-anchor="middle" font-family="Georgia, serif" font-size="10" fill="#738678">Drop refined line-art SVG here</text>
+</svg>

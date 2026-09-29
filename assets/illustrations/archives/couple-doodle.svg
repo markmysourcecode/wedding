@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 600" width="500" height="600">
+  <rect x="1" y="1" width="498" height="598" fill="#F9F7F2" stroke="#738678" stroke-width="1.5" stroke-dasharray="6 5"/>
+  <text x="250" y="290" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="20" fill="#738678">Placeholder</text>
+  <text x="250" y="322" text-anchor="middle" font-family="Georgia, serif" font-size="16" fill="#5C6B4E">couple-doodle.svg</text>
+  <text x="250" y="348" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#738678">Drop refined line-art SVG here (500×600)</text>
+</svg>
