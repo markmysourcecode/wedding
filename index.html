@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Jenica &amp; Mark — Febuary 18, 2027</title>
+<title>Jenica &amp; Mark — February 18, 2027</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
@@ -15,10 +15,15 @@
   --paper:#FFFFFF;
   --sage:#5C6B4E;
   --gold:#B89A6A;
+  --canary:#FFF2CC;
   --blush:#D9B8AE;
-  --lavender:#B6ACC4;
+  --blossom: #FDD9D8;
+  --lavender:#E0CBE3;
   --sand:#C9B79A;
   --teal:#5F8A86;
+  --palegreen: #CCE3CC;
+  --pastel:#C4E0C8;
+  --apricot:#FEDFC1;
   --xanadu-soft:rgba(115,134,120,.35);
   --line-w:1.5px;
   box-sizing:border-box;
@@ -106,7 +111,7 @@ p{max-width:56ch;margin:0 auto}
 .names .amp{font-style:italic;color:var(--gold);padding:0 6px}
 .couple-doodle{width:min(100%,var(--doodle-max,280px));aspect-ratio:5/6;border-radius:4px;margin:26px auto 0;overflow:hidden}
 .date-line{font-family:'Montserrat',sans-serif;font-size:.85rem;letter-spacing:.1em;color:var(--sage);margin-top:10px}
-.venue-line{font-size:1rem;font-style:italic;font-family:'Cormorant Garamond',serif;margin-top:6px;color:var(--ink)}
+.venue-line{font-size:1.5rem;font-style:italic;font-family:'Cormorant Garamond',serif;margin-top:6px;color:var(--ink)}
 .countdown{display:flex;gap:26px;justify-content:center;margin-top:38px}
 .countdown div{display:flex;flex-direction:column;align-items:center}
 .countdown .n{font-family:'Cormorant Garamond',serif;font-size:1.9rem;color:var(--ink)}
@@ -136,12 +141,12 @@ p{max-width:56ch;margin:0 auto}
 .card .meta{margin-top:12px;font-size:.78rem;letter-spacing:.03em;color:var(--sage)}
 @media(min-width:660px){.cards .card:first-child{border-right:1px solid var(--xanadu-soft)}}
 .divider-sprig{width:70px;height:44px;margin:0 auto -22px;position:relative;z-index:2;background:var(--ivory)}
-.same-venue-note{margin-top:34px;font-size:.78rem;font-style:italic;font-family:'Cormorant Garamond',serif;color:var(--sage);max-width:44ch}
+.same-venue-note{margin-top:34px;font-size:.90rem;font-style:italic;font-family:'Cormorant Garamond',serif;color:var(--sage);max-width:44ch}
 
 /* WEAR */
 .wear-cols{display:flex;gap:40px;justify-content:center;margin-top:34px;flex-wrap:wrap}
 .wear-col{flex:1 1 220px;max-width:250px}
-.wear-illus{height:280px}
+.wear-illus{height:200px}
 .wear-col h4{font-family:'Montserrat',sans-serif;font-weight:400;font-size:.8rem;letter-spacing:.08em;margin-top:16px;color:var(--sage)}
 .wear-note{font-size:.78rem;color:#4b463e;margin-top:10px;max-width:30ch;margin-left:auto;margin-right:auto}
 .swatches{display:flex;gap:8px;justify-content:center;margin-top:12px}
@@ -269,25 +274,25 @@ footer{padding:70px 0 calc(50px + env(safe-area-inset-bottom,0px));text-align:ce
 <section id="hero">
   <div class="wrap hero-inner">
     <!-- Optional botanical column: safe to comment out (layout stays centered) -->
-    <div class="hero-side left"><div class="placeholder" data-asset="hero-botanical-left.svg">88×280<br><b>hero-botanical-left.svg</b><br>architectural branch &amp; leaf cluster</div></div>
+    <div class="hero-side left"><div class="placeholder" data-asset="hero-botanical-left.png">88×280<br><b>hero-botanical-left.svg</b><br>architectural branch &amp; leaf cluster</div></div>
     <div class="hero-center">
-      <div class="date-line">SAVE THE DATE</div>
+      <div class="date-line">WE'RE GETTING MARRIED</div>
       <h1 class="names"><span data-cfg="groom">Mark</span><span class="amp">&amp;</span><span data-cfg="bride">Jenica</span></h1>
       <div class="placeholder couple-doodle" data-asset="couple-doodle.png">500×600 · <b>couple-doodle.svg</b><br>illustrated line-art doodle portrait of the couple, thin single-stroke, no fill</div>
       <hr class="rule">
       <div class="venue-line"><span data-cfg="venueName">Villa de los Jardines</span>, <span data-cfg="venueCity">Tagaytay</span></div>
-      <div class="date-line" style="margin-top:2px" data-cfg="dateDisplayCaps">Febuary 18, 2027</div>
+      <div class="date-line" style="margin-top:2px" data-cfg="dateDisplayCaps">February 18, 2027</div>
       <div class="countdown" id="countdown">
         <div><span class="n" id="cd-days">--</span><span class="l">DAYS</span></div>
         <div><span class="n" id="cd-hours">--</span><span class="l">HOURS</span></div>
         <div><span class="n" id="cd-mins">--</span><span class="l">MINS</span></div>
       </div>
-      <div class="scroll-cue">SCROLL</div>
-      <div class="placeholder cat-corner l" data-asset="cat-peek-1.svg">cat-peek-1.svg</div>
-      <div class="placeholder cat-corner r" data-asset="cat-peek-2.svg">cat-peek-2.svg</div>
+      <!-- <div class="scroll-cue">SCROLL</div>-->
+      <div class="placeholder cat-corner l" data-asset="cat-peek-1.png">cat-peek-1.svg</div>
+      <!-- <div class="placeholder cat-corner r" data-asset="cat-peek-2.png">cat-peek-2.svg</div> -->
     </div>
     <!-- Optional botanical column: safe to comment out (layout stays centered) -->
-    <div class="hero-side right"><div class="placeholder" data-asset="hero-botanical-right.svg">88×280<br><b>hero-botanical-right.svg</b><br>architectural branch &amp; leaf cluster</div></div>
+    <div class="hero-side right"><div class="placeholder" data-asset="hero-botanical-left.png">88×280<br><b>hero-botanical-right.svg</b><br>architectural branch &amp; leaf cluster</div></div>
   </div>
 </section>
 
@@ -297,18 +302,19 @@ footer{padding:70px 0 calc(50px + env(safe-area-inset-bottom,0px));text-align:ce
     <h2 class="section-head">How It Began</h2>
     <div class="story-block">
       <p class="story-text">They met the way most good things happen — quietly, without much fanfare, and at exactly the right time.</p>
-      <div class="placeholder story-illus" data-asset="shelfie.svg">340×140 · <b>shelfie.svg</b><br>stacked books, turntable, vinyl sleeves labeled "T.S.", "TOP", "Beatles"</div>
     </div>
     <div class="story-block">
-      <p class="story-text">He buys books the way some people collect stamps — with great intention and very little follow-through. The shelves are full. The spines are pristine. Somewhere between the unread pages and the background music, he found her. She brought Taylor Swift into the house and never left. He countered with Twenty One Pilots and The Beatles, and somehow it all made sense on the same turntable.</p>
-      <div class="placeholder story-illus" data-asset="vinyl.png">340×140 · <b>stamps-trio.svg</b><br>Korea (Namsan Tower), Singapore (Marina Bay Sands), Hội An lantern — circular typographic stamps</div>
+      <div class="placeholder story-illus" data-asset="books.png">340×140 · <b>shelfie.svg</b><br>stacked books, turntable, vinyl sleeves labeled "T.S.", "TOP", "Beatles"</div>
+      <p class="story-text">He buys books the way some people collect stamps — with great intention and very little follow-through. The shelves are full. The spines are pristine. Somewhere between the unread pages and the background music, he found her.</p>
+    </div>
+    <div class="story-block">
+      <div class="placeholder story-illus" data-asset="vinyl.png">340×140 · <b>shelfie.svg</b><br>stacked books, turntable, vinyl sleeves labeled "T.S.", "TOP", "Beatles"</div>
+      <p class="story-text"> She brought Taylor Swift into the house and never left. He countered with Twenty One Pilots and The Beatles, and somehow it all made sense on the same turntable.</p>
     </div>
     <div class="story-block">
       <p class="story-text">Then, they started collecting places, too.</p>
-    </div>
-    <div class="story-block">
-      <p class="story-text">New cities, long flights, questionable navigation, and the quiet realization that anywhere is better when you have your favorite person beside you.</p>
       <div class="placeholder story-illus" data-asset="travels.png">340×140 · <b>seven-cats-couch.svg</b><br>editorial portrait, minimal line art</div>
+      <p class="story-text">New cities, long flights, questionable navigation, and the quiet realization that anywhere is better when you have your favorite person beside you.</p>
     </div>
     <div class="story-block">
       <p class="story-text">Back home, seven cats joined the story – although, if you asked the cats, they would probably say the story has always been about them.</p>
@@ -329,18 +335,16 @@ footer{padding:70px 0 calc(50px + env(safe-area-inset-bottom,0px));text-align:ce
     <div class="cards">
       <div class="card">
         <h3>Ceremony</h3>
-        <p><span data-cfg="venueName">Villa de los Jardines</span> — Garden Chapel</p>
-        <div class="meta" data-cfg="dateDisplay">Febuary 18, 2027</div>
-        <div class="meta" data-cfg="ceremonyTime">3:00 PM</div>
+        <p><span data-cfg="venueName">Villa de los Jardines</span> — Garden</p>
+        <!--<div class="meta" data-cfg="ceremonyTime">3:00 PM</div>-->
       </div>
       <div class="card">
         <h3>Reception</h3>
-        <p><span data-cfg="venueName">Villa de los Jardines</span> — Grand Ballroom</p>
-        <div class="meta">Garden Formal</div>
+        <p><span data-cfg="venueName">Villa de los Jardines</span> — Banquet Hall</p>
       </div>
     </div>
     <p class="same-venue-note">Ceremony and reception both take place at <span data-cfg="venueName">Villa de los Jardines</span> — just a short walk apart, no need to travel between venues.</p>
-    <div class="divider-sprig"><div class="placeholder" data-asset="sprig-divider.svg" style="height:100%">70×44 · sprig-divider.svg</div></div>
+    <!--<div class="divider-sprig"><div class="placeholder" data-asset="sprig-divider.svg" style="height:100%">70×44 · sprig-divider.svg</div></div>-->
   </div>
 </section>
 
@@ -351,20 +355,22 @@ footer{padding:70px 0 calc(50px + env(safe-area-inset-bottom,0px));text-align:ce
     <p>Garden Formal — we'd love to see you dressed for the occasion.</p>
     <div class="wear-cols">
       <div class="wear-col">
-        <div class="placeholder wear-illus" data-asset="dress-silhouette.svg">220×280 · <b>dress-silhouette.svg</b><br>elegant dress silhouette, thin single-stroke, no fill</div>
+        <div class="placeholder wear-illus" data-asset="dress.png">220×280 · <b>dress-silhouette.svg</b><br>elegant dress silhouette, thin single-stroke, no fill</div>
         <h4>WOMENS</h4>
-        <p class="wear-note">Soft, flowing silhouettes in blush, dusty lavender, sage, or cream — garden party elegance rather than formal black tie. Floor-length or midi, breathable fabrics for an outdoor garden setting.</p>
+        <p class="wear-note">Soft, flowing silhouettes in soft yellow, pastel green, dusty lavender, blossom pink, or apricot. Floor-length or midi, with breathable fabrics suited to an outdoor garden setting.</p>
         <div class="swatches">
-          <div class="swatch" style="background:var(--blush)"></div>
+          <div class="swatch" style="background:var(--canary)"></div>
+          <div class="swatch" style="background:var(--pastel)"></div>
           <div class="swatch" style="background:var(--lavender)"></div>
-          <div class="swatch" style="background:var(--sage)"></div>
-          <div class="swatch" style="background:#F3EFE6;border-color:rgba(0,0,0,.15)"></div>
+          <div class="swatch" style="background:var(--blossom)"></div>
+          <div class="swatch" style="background:var(--apricot)"></div>
+          <!-- <div class="swatch" style="background:#F3EFE6;border-color:rgba(0,0,0,.15)"></div> -->
         </div>
       </div>
       <div class="wear-col">
-        <div class="placeholder wear-illus" data-asset="suit-silhouette.svg">220×280 · <b>suit-silhouette.svg</b><br>black suit silhouette, thin single-stroke, no fill</div>
+        <div class="placeholder wear-illus" data-asset="suit.png">220×280 · <b>suit-silhouette.svg</b><br>black suit silhouette, thin single-stroke, no fill</div>
         <h4>MENS</h4>
-        <p class="wear-note">A well-tailored black suit with a crisp white shirt. Ties optional — comfort is encouraged, especially once the dancing starts.</p>
+        <p class="wear-note">A classic, sharp suit with a crisp shirt — clean and polished. Ties are optional. Choose comfortable fabrics and polished shoes suited for an evening celebration.</p>
         <div class="swatches">
           <div class="swatch" style="background:var(--ink)"></div>
           <div class="swatch" style="background:var(--paper);border-color:rgba(0,0,0,.2)"></div>
@@ -392,13 +398,13 @@ footer{padding:70px 0 calc(50px + env(safe-area-inset-bottom,0px));text-align:ce
         <div class="sched-card">
           <div class="sched-time">4:00 PM</div>
           <h4>Wedding Ceremony</h4>
-          <p>Exchanging vows under the abundance of God’s grace — a moment our sevents cats have been so-patiently waiting for.</p>
+          <p>Exchanging vows under the abundance of God’s grace — a moment our seven cats have been so-patiently waiting for.</p>
         </div>
       </div>
       <div class="sched-item left">
         <div class="sched-marker"></div>
         <div class="sched-card">
-          <div class="sched-time">4:30 PM</div>
+          <div class="sched-time">5:00 PM</div>
           <h4>Cocktail Hour</h4>
           <p>Light bites and easy conversation on the garden terrace while the wedding party steps away for photos.</p>
         </div>
@@ -408,17 +414,17 @@ footer{padding:70px 0 calc(50px + env(safe-area-inset-bottom,0px));text-align:ce
         <div class="sched-card">
           <div class="sched-time">6:00 PM</div>
           <h4>Reception Dinner</h4>
-          <p>Dinner is served in the grand ballroom, followed by toasts from the people who know them best.</p>
+          <p>Dinner is served in the banquet hall, followed by toasts from the people who know them best.</p>
         </div>
       </div>
       <div class="sched-item left">
         <div class="sched-marker"></div>
         <div class="sched-card">
-          <div class="sched-time">8:30 PM</div>
-          <h4>Dancing &amp; Celebration</h4>
+          <div class="sched-time">8:00 PM</div>
+          <h4>After Party</h4>
           <p>The floor opens up — first dance, open bar, and dancing until the early hours.</p>
         </div>
-        <div class="placeholder sched-cat-peek" data-asset="cat-peek-schedule.svg">cat-peek-schedule.svg</div>
+        <div class="placeholder sched-cat-peek" data-asset="cat-peek-schedule.png">cat-peek-schedule.svg</div>
       </div>
     </div>
   </div>
@@ -430,7 +436,7 @@ footer{padding:70px 0 calc(50px + env(safe-area-inset-bottom,0px));text-align:ce
     <h2 class="section-head">Find Your Way</h2>
     <h3 style="font-size:1.5rem;font-style:italic" data-cfg="venueName">Villa de los Jardines</h3>
     <div class="loc-stamp-frame">
-      <div class="placeholder loc-stamp" data-asset="stamp-venue.jpg">Venue photo<br><b>stamp-venue.jpg</b></div>
+      <div class="placeholder loc-stamp" data-asset="stamp-venue.png">Venue photo<br><b>stamp-venue.jpg</b></div>
     </div>
     <div class="loc-frame">
       <p style="font-size:.88rem" data-cfg="venueAddress">Km 58 Aguinaldo Highway, Tagaytay City</p>
@@ -469,12 +475,12 @@ footer{padding:70px 0 calc(50px + env(safe-area-inset-bottom,0px));text-align:ce
   <div class="wrap">
     <div class="eyebrow">RSVP</div>
     <h2 class="section-head">Join the Celebration</h2>
-    <p>We joyfully request the favour of your reply no later than <span data-cfg="rsvpBy">Febuary 1, 2025</span>.</p>
+    <p>We joyfully request the favour of your reply no later than <span data-cfg="rsvpBy">February 1, 2025</span>.</p>
     <div class="rsvp-frame">
-      <div class="placeholder cat-corner" data-asset="cat-peek-rsvp.svg">cat-peek-rsvp.svg</div>
+      <div class="placeholder cat-corner" data-asset="cat-peek-rsvp.png">cat-peek-rsvp.svg</div>
       <form class="rsvp-form" id="rsvp-form">
         <div class="guest-name" id="guest-name">Dear Guest</div>
-        <label>Will you be attending? We joyfully request the favour of your reply no later than October 31, 2026</label>
+        <label>Will you be attending?</label>
         <div class="radio-row">
           <button type="button" class="radio-opt" data-val="yes">Yes, I’ll be there</button>
           <button type="button" class="radio-opt" data-val="no">No, I can’t make it</button>
@@ -496,9 +502,9 @@ footer{padding:70px 0 calc(50px + env(safe-area-inset-bottom,0px));text-align:ce
 
 <footer>
   <div class="wrap">
-    <div class="placeholder footer-illus" data-asset="footer-vinyl.svg">70×50 · footer-vinyl.svg</div>
+    <div class="placeholder footer-illus" data-asset="couple-doodle.png">70×50 · footer-vinyl.svg</div>
     <div class="footer-names"><span data-cfg="groom">Mark</span> &amp; <span data-cfg="bride">Jenica</span></div>
-    <div class="footer-date" data-cfg="dateDisplayCaps">Febuary 18, 2027</div>
+    <div class="footer-date" data-cfg="dateDisplayCaps">February 18, 2027</div>
     <p class="footer-line">With love and gratitude</p>
   </div>
 </footer>
@@ -520,12 +526,12 @@ const CONFIG = {
   bride: 'Jenica',
   groom: 'Mark',
   isoDateTime: '2027-02-18T15:00:00+08:00',   // used for the live countdown
-  dateDisplay: 'Febuary 18, 2027',
-  dateDisplayCaps: 'FEBUARY 18, 2027',
+  dateDisplay: 'February 18, 2027',
+  dateDisplayCaps: 'FEBRUARY 18, 2027',
   rsvpBy: 'October 31, 2026',
   venueName: 'The Emerald Events Place',
   venueCity: 'Antipolo City',
-  venueAddress: 'H598+R3G, Cabrera Rd, Antipolo, 1870 Rizal',
+  venueAddress: 'The Emerald Events Place, Cabrera Road, Brgy. San Roque, Antipolo City, 1870, Rizal',
   ceremonyTime: '4:00 PM'
 };
 
@@ -551,6 +557,12 @@ const CATS = [
 ];
 const STROKE_COLORS = ['var(--blush)','var(--lavender)','var(--sage)','var(--teal)','var(--gold)','var(--sand)','var(--xanadu)'];
 
+
+// ---- Backend endpoint (Apps Script Web App) ----
+const BACKEND = {
+  url: 'https://script.google.com/macros/s/AKfycbx-_7G8jEMeiHhauUbUTM1TEvZuXh2vg91IRqcJUe-9gI80vAYsKoJ5sSYJs0UAKsA-8g/exec',
+  secret: '3fe6a966-8387-4a5e-b338-d6b2eb336c4a-backtologin'
+};
 // Mock guest list — stands in for the Guests sheet until Apps Script is wired up
 const MOCK_GUESTS = {'X4K9-Maria':{name:'Maria', status:'pending'}, 'A7P2-Diego':{name:'Diego', status:'pending'}};
 
@@ -613,26 +625,43 @@ navLinks.querySelectorAll('a').forEach(a=>{
   });
 });
 
-// ---- Token verification (client-side mock of Apps Script doGet?action=verify) ----
+// ---- Token verification (Apps Script doGet?action=verify) ----
 const params = new URLSearchParams(location.search);
 const token = params.get('invite');
 let currentGuest = null;
-if(token){
-  const g = MOCK_GUESTS[token];
-  if(!g){
+
+async function verifyToken(){
+  if(!token) return; // no token: generic preview mode, form still usable for demo purposes
+
+  try{
+    const url = `${BACKEND.url}?action=verify&token=${encodeURIComponent(token)}&secret=${encodeURIComponent(BACKEND.secret)}`;
+    const res = await fetch(url);
+    const data = await res.json();
+    const cleanName = n => n.slice(n.indexOf('-') + 1)
+      .toLowerCase()
+      .replace(/(^|[\s-])\p{L}/gu, c => c.toUpperCase());
+    const name = cleanName(data.name);
+
+    if(!data.valid){
+      document.getElementById('invalid-screen').classList.add('show');
+      return;
+    }
+    if(data.status === 'responded'){
+      document.getElementById('guest-name').textContent = `Dear ${name}`;
+      document.getElementById('rsvp-form').classList.add('hide');
+      document.getElementById('rsvp-success').classList.add('show');
+      document.getElementById('success-headline').textContent = 'You\'ve already replied';
+      document.getElementById('success-body').textContent = 'Thank you again — we can\'t wait to celebrate.';
+      return;
+    }
+    currentGuest = {token, name: name};
+    document.getElementById('guest-name').textContent = `Dear ${name}`;
+  } catch(err){
+    console.error('RSVP verify failed:', err);
     document.getElementById('invalid-screen').classList.add('show');
-  } else if(g.status === 'responded'){
-    document.getElementById('guest-name').textContent = `Dear ${g.name}`;
-    document.getElementById('rsvp-form').classList.add('hide');
-    document.getElementById('rsvp-success').classList.add('show');
-    document.getElementById('success-headline').textContent = 'You\'ve already replied';
-    document.getElementById('success-body').textContent = 'Thank you again — we can\'t wait to celebrate.';
-  } else {
-    currentGuest = {token, ...g};
-    document.getElementById('guest-name').textContent = `Dear ${g.name}`;
   }
 }
-// no token: page renders in generic preview mode, RSVP form still usable for demo purposes
+verifyToken();
 
 // ---- RSVP form ----
 let attending = null;
@@ -644,18 +673,50 @@ document.querySelectorAll('.radio-opt').forEach(btn=>{
     document.getElementById('rsvp-submit').disabled = false;
   });
 });
-document.getElementById('rsvp-form').addEventListener('submit', e=>{
+document.getElementById('rsvp-form').addEventListener('submit', async e=>{
   e.preventDefault();
   if(!attending) return;
-  // Real build: POST to Apps Script doPost?action=rsvp with token + shared secret
+
+  const submitBtn = document.getElementById('rsvp-submit');
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Sending…';
+
+  const dietary = document.querySelector('.dietary').value;
   const name = currentGuest ? currentGuest.name : 'Guest';
-  if(currentGuest) MOCK_GUESTS[currentGuest.token].status = 'responded';
-  document.getElementById('rsvp-form').classList.add('hide');
-  document.getElementById('rsvp-success').classList.add('show');
-  document.getElementById('success-headline').textContent = attending==='yes' ? 'See you there!' : 'You\'ll be missed';
-  document.getElementById('success-body').textContent = attending==='yes'
-    ? `Thank you, ${name} — we're so glad you're joining us on ${CONFIG.dateDisplay}.`
-    : `Thank you for letting us know, ${name}. We'll be thinking of you.`;
+
+  try{
+    const res = await fetch(BACKEND.url, {
+      method: 'POST',
+      headers: {'Content-Type': 'text/plain;charset=utf-8'}, // avoids a CORS preflight to Apps Script
+      body: JSON.stringify({
+        action: 'rsvp',
+        token: currentGuest ? currentGuest.token : token,
+        secret: BACKEND.secret,
+        attending,
+        dietary
+      })
+    });
+    const data = await res.json();
+
+    if(!data.ok){
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Send Reply';
+      alert(data.alreadyResponded ? 'Looks like you already replied — refresh the page to see it.' : 'Something went wrong — please try again.');
+      return;
+    }
+
+    document.getElementById('rsvp-form').classList.add('hide');
+    document.getElementById('rsvp-success').classList.add('show');
+    document.getElementById('success-headline').textContent = attending==='yes' ? 'See you there!' : 'You\'ll be missed';
+    document.getElementById('success-body').textContent = attending==='yes'
+      ? `Thank you, ${name} — we're so glad you're joining us on ${CONFIG.dateDisplay}.`
+      : `Thank you for letting us know, ${name}. We'll be thinking of you.`;
+  } catch(err){
+    console.error('RSVP submit failed:', err);
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Send Reply';
+    alert('Something went wrong — please check your connection and try again.');
+  }
 });
 
 // ---- Admin tool (?admin=1) ----
